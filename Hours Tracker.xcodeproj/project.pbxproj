@@ -14,6 +14,8 @@
 		2A8327A72A5F4DE0007CE35F /* Hours_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8327A62A5F4DE0007CE35F /* Hours_TrackerTests.swift */; };
 		2A8327B12A5F4DE0007CE35F /* Hours_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8327B02A5F4DE0007CE35F /* Hours_TrackerUITests.swift */; };
 		2A8327B32A5F4DE0007CE35F /* Hours_TrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8327B22A5F4DE0007CE35F /* Hours_TrackerUITestsLaunchTests.swift */; };
+		2A8327C12A605C9F007CE35F /* Python3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8327C02A605C9F007CE35F /* Python3.framework */; };
+		2A8327C22A605C9F007CE35F /* Python3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8327C02A605C9F007CE35F /* Python3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2A8327C32A605C9F007CE35F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2A8327C22A605C9F007CE35F /* Python3.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2A8327912A5F4DDF007CE35F /* Hours Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hours Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8327942A5F4DDF007CE35F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +61,7 @@
 		2A8327AC2A5F4DE0007CE35F /* Hours TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hours TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8327B02A5F4DE0007CE35F /* Hours_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hours_TrackerUITests.swift; sourceTree = "<group>"; };
 		2A8327B22A5F4DE0007CE35F /* Hours_TrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hours_TrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2A8327C02A605C9F007CE35F /* Python3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python3.framework; path = Library/Frameworks/Python3.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A8327C12A605C9F007CE35F /* Python3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +97,7 @@
 				2A8327A52A5F4DE0007CE35F /* Hours TrackerTests */,
 				2A8327AF2A5F4DE0007CE35F /* Hours TrackerUITests */,
 				2A8327922A5F4DDF007CE35F /* Products */,
+				2A8327BF2A605C9F007CE35F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +140,14 @@
 			path = "Hours TrackerUITests";
 			sourceTree = "<group>";
 		};
+		2A8327BF2A605C9F007CE35F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A8327C02A605C9F007CE35F /* Python3.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,6 +158,7 @@
 				2A83278D2A5F4DDF007CE35F /* Sources */,
 				2A83278E2A5F4DDF007CE35F /* Frameworks */,
 				2A83278F2A5F4DDF007CE35F /* Resources */,
+				2A8327C32A605C9F007CE35F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -422,6 +450,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
