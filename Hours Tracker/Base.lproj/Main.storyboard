@@ -709,7 +709,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="578" height="426"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField identifier="dateField" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sva-2g-ZOF">
+                            <textField identifier="dateField" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sva-2g-ZOF" userLabel="Date Field">
                                 <rect key="frame" x="148" y="391" width="96" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" identifier="dateField" drawsBackground="YES" id="XDa-cY-dVg">
