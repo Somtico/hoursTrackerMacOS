@@ -16,6 +16,8 @@
 		2A8327B32A5F4DE0007CE35F /* Hours_TrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8327B22A5F4DE0007CE35F /* Hours_TrackerUITestsLaunchTests.swift */; };
 		2A8327C12A605C9F007CE35F /* Python3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8327C02A605C9F007CE35F /* Python3.framework */; };
 		2A8327C22A605C9F007CE35F /* Python3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8327C02A605C9F007CE35F /* Python3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2A8327FD2A61DAA8007CE35F /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 2A8327FC2A61DAA8007CE35F /* Algorithms */; };
+		2A8327FF2A61EDA2007CE35F /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8327FE2A61EDA2007CE35F /* Package.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,9 @@
 		2A8327B02A5F4DE0007CE35F /* Hours_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hours_TrackerUITests.swift; sourceTree = "<group>"; };
 		2A8327B22A5F4DE0007CE35F /* Hours_TrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hours_TrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2A8327C02A605C9F007CE35F /* Python3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python3.framework; path = Library/Frameworks/Python3.framework; sourceTree = DEVELOPER_DIR; };
+		2A8327FE2A61EDA2007CE35F /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		2AC3AB672A65C48A00BFD4A3 /* PythonKit-0.3.1 */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "PythonKit-0.3.1"; sourceTree = "<group>"; };
+		2AC3AB682A65C4B500BFD4A3 /* PythonKit-0.3.1 */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "PythonKit-0.3.1"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A8327FD2A61DAA8007CE35F /* Algorithms in Frameworks */,
 				2A8327C12A605C9F007CE35F /* Python3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +99,8 @@
 		2A8327882A5F4DDF007CE35F = {
 			isa = PBXGroup;
 			children = (
+				2AC3AB662A65C48A00BFD4A3 /* Packages */,
+				2A8327FE2A61EDA2007CE35F /* Package.swift */,
 				2A8327932A5F4DDF007CE35F /* Hours Tracker */,
 				2A8327A52A5F4DE0007CE35F /* Hours TrackerTests */,
 				2A8327AF2A5F4DE0007CE35F /* Hours TrackerUITests */,
@@ -148,6 +156,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2AC3AB662A65C48A00BFD4A3 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				2AC3AB672A65C48A00BFD4A3 /* PythonKit-0.3.1 */,
+				2AC3AB682A65C4B500BFD4A3 /* PythonKit-0.3.1 */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,6 +182,9 @@
 			dependencies = (
 			);
 			name = "Hours Tracker";
+			packageProductDependencies = (
+				2A8327FC2A61DAA8007CE35F /* Algorithms */,
+			);
 			productName = "Hours Tracker";
 			productReference = 2A8327912A5F4DDF007CE35F /* Hours Tracker.app */;
 			productType = "com.apple.product-type.application";
@@ -237,6 +257,9 @@
 				Base,
 			);
 			mainGroup = 2A8327882A5F4DDF007CE35F;
+			packageReferences = (
+				2A8327FB2A61DAA8007CE35F /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
 			productRefGroup = 2A8327922A5F4DDF007CE35F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -279,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A8327FF2A61EDA2007CE35F /* Package.swift in Sources */,
 				2A8327972A5F4DDF007CE35F /* ViewController.swift in Sources */,
 				2A8327952A5F4DDF007CE35F /* AppDelegate.swift in Sources */,
 			);
@@ -447,6 +471,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Hours Tracker/Hours_Tracker.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -473,6 +498,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Hours Tracker/Hours_Tracker.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -600,6 +626,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2A8327FB2A61DAA8007CE35F /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2A8327FC2A61DAA8007CE35F /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A8327FB2A61DAA8007CE35F /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2A8327892A5F4DDF007CE35F /* Project object */;
 }
